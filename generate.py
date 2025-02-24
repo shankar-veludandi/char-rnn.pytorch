@@ -48,8 +48,6 @@ if __name__ == '__main__':
     argparser.add_argument('-l', '--predict_len', type=int, default=100)
     argparser.add_argument('-t', '--temperature', type=float, default=0.8)
     argparser.add_argument('--cuda', action='store_true')
-    argparser.add_argument('--model_type', type=str, default="rnn",
-                           help="Choose from [rnn, gru, lstm] if needed.")
     argparser.add_argument('--hidden_size', type=int, default=128)
     argparser.add_argument('--n_layers', type=int, default=2)
     args = argparser.parse_args()
