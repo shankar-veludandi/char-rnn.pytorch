@@ -37,7 +37,7 @@ class CharRNN(nn.Module):
 
     def init_hidden(self, batch_size):
         if self.model == "lstm":
-            return (Variable(torch.zeros(self.n_layers, batch_size, self.hidden_size)),
-                    Variable(torch.zeros(self.n_layers, batch_size, self.hidden_size)))
-        return Variable(torch.zeros(self.n_layers, batch_size, self.hidden_size))
+            return (torch.zeros(self.n_layers, batch_size, self.hidden_size),
+                    torch.zeros(self.n_layers, batch_size, self.hidden_size))
+        return torch.zeros(self.n_layers, batch_size, self.hidden_size)
 
