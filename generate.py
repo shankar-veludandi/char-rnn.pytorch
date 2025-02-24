@@ -73,4 +73,5 @@ if __name__ == '__main__':
 
     # 3) Generate text
     del args.filename
+    del args.model
     print(generate(decoder, **vars(args)))
