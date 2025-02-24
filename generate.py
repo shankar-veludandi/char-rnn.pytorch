@@ -58,7 +58,6 @@ if __name__ == '__main__':
         input_size=n_characters,
         hidden_size=args.hidden_size,
         output_size=n_characters,
-        model=args.model_type,
         n_layers=args.n_layers
     )
 
