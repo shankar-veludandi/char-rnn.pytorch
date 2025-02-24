@@ -51,6 +51,14 @@ if __name__ == '__main__':
     argparser.add_argument('--cuda', action='store_true')
     args = argparser.parse_args()
 
+    decoder = CharRNN(
+        input_size=n_characters,
+        hidden_size=args.hidden_size,
+        output_size=n_characters,
+        model=args.model_type,
+        n_layers=args.n_layers
+    )
+
     state_dict = torch.load(args.filename, weights_only=True)
     decoder.load_state_dict(state_dict)
 
