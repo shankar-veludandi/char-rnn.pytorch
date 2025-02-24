@@ -74,6 +74,6 @@ if __name__ == '__main__':
     # 3) Generate text
     del args.filename
     del args.model
-    del args.hiden_size
+    del args.hidden_size
     del args.n_layers
     print(generate(decoder, **vars(args)))
