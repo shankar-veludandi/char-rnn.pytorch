@@ -67,7 +67,7 @@ def train(inp, target):
 
 def save():
     save_filename = os.path.splitext(os.path.basename(args.filename))[0] + '.pt'
-    torch.save(decoder, save_filename)
+    torch.save(decoder.state_dict(), save_filename)
     print('Saved as %s' % save_filename)
 
 # Initialize models and start training
